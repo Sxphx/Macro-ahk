@@ -83,13 +83,17 @@ $F1::
     colors := "0x444444, 0x3D3DA2"
     WinActivate ahk_pid %1%
     Sleep 100
-    Send {BackSpace}
+    Send 0
+    Sleep 400
+    Send 0
     Sleep 100
     Loop, 10
     {
         Click, 100, 500
     }
-    Send {BackSpace}1
+    Send 0
+    Sleep 400
+    Send 1
     Sleep 100
     if autorhythm = true
     {
@@ -101,13 +105,17 @@ $F1::
 
     WinActivate ahk_pid %2%
     Sleep 100
-    Send {BackSpace}
+    Send 0
+    Sleep 400
+    Send 0
     Sleep 100
     Loop, 10
     {
         Click, 100, 500
     }
-    Send {BackSpace}1
+    Send 0
+    Sleep 400
+    Send 1
     Sleep 100
     if autorhythm = true
     {
@@ -124,7 +132,11 @@ $F1::
         {
             WinActivate ahk_pid %1%
             Sleep 100
-            Send {Backspace}2
+            Send 0
+            Sleep 400
+            Send 0
+            Sleep 100
+            Send 2
             Eating = 0
             Sleep 100
             Click, 100, 500
@@ -132,7 +144,9 @@ $F1::
             Sleep 100
             WinActivate ahk_pid %2%
             Sleep 100
-            Send {BackSpace}1
+            Send 0
+            Sleep 400
+            Send 1
             Sleep 100
             if autorhythm = true
             {
@@ -207,7 +221,11 @@ $F1::
             }
             WinActivate ahk_pid %1%
             Sleep 200
-            Send {Backspace}2
+            Send 0
+            Sleep 400
+            Send 0
+            Sleep 100
+            Send 2
             Sleep 100
             Click, 100, 500
             Sleep 100
@@ -215,7 +233,9 @@ $F1::
             {
                 Click, 100, 500
             }
-            Send {Backspace}1
+            Send 0
+            Sleep 400
+            Send 1
             if autorhythm = true
             {
                 if rhyleft = true
@@ -232,14 +252,20 @@ $F1::
             {
                 WinActivate ahk_pid %2%
                 Sleep 100
-                Send {Backspace}2
+                Send 0
+                Sleep 400
+                Send 0
+                Sleep 100
+                Send 2
                 Eating = 0
                 Sleep 100
                 Click, 100, 500
                 duratimer := A_TickCount
                 WinActivate ahk_pid %1%
                 Sleep 100
-                Send {BackSpace}1
+                Send 0
+                Sleep 400
+                Send 1
                 Sleep 100
                 if autorhythm = true
                 {
@@ -313,14 +339,20 @@ $F1::
 
                 WinActivate ahk_pid %2%
                 Sleep 100
-                Send {Backspace}2
+                Send 0
+                Sleep 400
+                Send 0
+                Sleep 100
+                Send 2
                 Sleep 100
                 Click, 100, 500
                 Loop, 10
                 {
                     Click, 100, 500
                 }
-                Send {BackSpace}1 
+                Send 0
+                Sleep 400
+                Send 1 
                 Sleep 100
                 if autorhythm = true
                 {
@@ -339,7 +371,9 @@ $F1::
         {
             WinActivate ahk_pid %2%
             Sleep 100
-            Send {Backspace}34567890
+            Send 0
+            Sleep 400
+            Send 034567890
             WinActivate ahk_pid %2%
             Sleep 100
             CoordMode, Pixel, Window
@@ -373,7 +407,9 @@ $F1::
         {
             WinActivate ahk_pid %1%
             Sleep 100
-            Send {Backspace}34567890
+            Send 0
+            Sleep 400
+            Send 034567890
             WinActivate ahk_pid %1%
             Sleep 100
             CoordMode, Pixel, Window
